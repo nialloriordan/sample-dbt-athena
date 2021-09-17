@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: sample_report
+    description: "sample report to be used by analysts"
+    tags: ['outputs']
+    columns:
+      - name: count
+        description: "number of rows for a given day"
+        tests:
+          - not_null
+      - name: creation_date
+        description: "Date at which row was created"

@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: dbt_athena_test
+    description: Database used for testing dbt with athena
+    tables:
+      - name: list_management
+        description: This is the raw data for testing dbt athena
+        tags: ["raw_data", "athena_test"]

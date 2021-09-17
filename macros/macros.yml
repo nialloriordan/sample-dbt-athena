@@ -1,0 +1,14 @@
+version: 2
+
+macros:
+  - name: test_max_length
+    database: awsdatacatalog
+    description: This macro tests whether any values in a column exceed the max column length value
+    schema: dbt_athena_test
+    arguments:
+      - name: model
+        type: table
+        description: table to perform test on
+      - name: column_name
+        type: text
+        description: column to test

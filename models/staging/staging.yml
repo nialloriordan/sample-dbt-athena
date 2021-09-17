@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: sample_transformation
+    description: "sample transformation table querying the raw data"
+    tags: ['staging']
+    columns:
+      - name: col0
+        description: "First Column"
+        tests:
+          - not_null
+          - max_length
+      - name: col1
+        description: "Second Column"
+        tests:
+          - not_null
+          - max_length
+      - name: col2
+        description: "Third Column"
+        tests:
+          - not_null
+          - max_length
+      - name: col3
+        description: "Fourth Column"
+        tests:
+          - not_null
+          - max_length
+      - name: col4
+        description: "Fifth Column"
+        tests:
+          - not_null
+          - max_length
+
+  - name: sample_incremental_transformation
+    description: "sample incremental transformation querying the raw data"
+    tags: ['staging']
+    columns:
+      - name: col1
+        description: "Second Column"
+        tests:
+          - not_null
+          - max_length
+      - name: creation_date
+        description: "Date at which row was created"
+
+  - name: valid_list_management
+    description: "Query raw data with a valid date"
+    tags: ['staging']
