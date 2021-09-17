@@ -1,0 +1,11 @@
+athena:
+  target: dev
+  outputs:
+    dev:
+      type: athena
+      s3_staging_dir: s3://dbt-athena-test/dbt_athena_test/
+      region_name: eu-west-1
+      schema: dbt_athena_test
+      database: awsdatacatalog
+      aws_profile_name: default
+      threads: 3
